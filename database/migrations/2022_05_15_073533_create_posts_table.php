@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
         });
+        
     }
 
     /**
@@ -29,3 +30,4 @@ class CreatePostsTable extends Migration
         Schema::dropIfExists('posts');
     }
 }
+

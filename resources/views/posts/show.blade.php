@@ -19,6 +19,20 @@
                 <p>{{ $post->body }}</p>    
             </div>
         </div>
+        <form action="/posts/{{ $post->id }}" id="form_delete" method="post" >
+            @csrf
+            @method('DELETE')
+            <input type="button" style="display:none">
+            <p class='delete'>[<button type="button"  onclick="return buttonClick(this);" >delete</button>]</p>
+        <script>
+            function buttonClick() {
+                'use strict';
+                if (confirm('記事を削除すると復元できません。\n本当に削除しますか？')) {
+                    document.getElementById('form_delete').submit();
+                }
+            }        
+        </script>
+        </form>
         <div class="footer">
             <a href="/">戻る</a>
         </div>

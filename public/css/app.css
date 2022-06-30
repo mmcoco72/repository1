@@ -2154,11 +2154,14 @@ pre code {
   opacity: 1;
 }
 
+<<<<<<< HEAD
+=======
 .form-control:-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
+>>>>>>> master
 .form-control::placeholder {
   color: #6c757d;
   opacity: 1;
@@ -2645,7 +2648,10 @@ textarea.form-control.is-invalid {
   vertical-align: middle;
   -webkit-user-select: none;
      -moz-user-select: none;
+<<<<<<< HEAD
+=======
       -ms-user-select: none;
+>>>>>>> master
           user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
@@ -8267,21 +8273,30 @@ button.bg-dark:focus {
 .user-select-all {
   -webkit-user-select: all !important;
      -moz-user-select: all !important;
+<<<<<<< HEAD
+=======
       -ms-user-select: all !important;
+>>>>>>> master
           user-select: all !important;
 }
 
 .user-select-auto {
   -webkit-user-select: auto !important;
      -moz-user-select: auto !important;
+<<<<<<< HEAD
+=======
       -ms-user-select: auto !important;
+>>>>>>> master
           user-select: auto !important;
 }
 
 .user-select-none {
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+<<<<<<< HEAD
+=======
       -ms-user-select: none !important;
+>>>>>>> master
           user-select: none !important;
 }
 

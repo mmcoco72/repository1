@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+@extends('layouts.app')
+
+@section('content')
 <html lang="{{ str_replace("_", "-", app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -19,11 +22,11 @@
                 <p>{{ $post->body }}</p>    
             </div>
         </div>
-        <form action="/posts/{{ $post->id }}" id="form_delete" method="post" >
+        <form action="/posts/{{ $post->id }}" id="form_delete" method="post" style="display:inline">
             @csrf
             @method('DELETE')
             <input type="button" style="display:none">
-            <p class='delete'>[<button type="button"  onclick="return buttonClick(this);" >delete</button>]</p>
+            <p class='delete'><button type="button"  onclick="return buttonClick(this);" >delete</button></p>
         <script>
             function buttonClick() {
                 'use strict';
@@ -33,8 +36,11 @@
             }        
         </script>
         </form>
-        <div class="footer">
-            <a href="/">戻る</a>
-        </div>
+        <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
     </body>
+    <div class="footer">
+            <a href="/">戻る</a>
+    </div>
 </html>
+
+@endsection
